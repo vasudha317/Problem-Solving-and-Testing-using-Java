@@ -56,3 +56,18 @@ public class RealTimeStreamAnalyticsEngine {
         sc.close();
     }
 }
+
+
+Input:
+6
+S1 45.0
+S1 60.0
+S2 55.0
+S2 65.0
+S3 40.0
+S3 80.0
+
+Output:
+S3 80.0
+S1 60.0
+S2 60.0
