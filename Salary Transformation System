@@ -19,3 +19,11 @@ public class SalaryTransformation {
               .forEach(salary -> System.out.print(salary + " "));
     }
 }
+
+
+Input:
+5
+10000 20000 30000 40000 50000
+
+Output:
+11000 22000 33000 44000 55000
