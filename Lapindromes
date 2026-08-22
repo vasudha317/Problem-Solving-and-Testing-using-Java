@@ -1,0 +1,60 @@
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int T = Integer.parseInt(sc.nextLine());
+
+        while (T-- > 0) {
+            String s = sc.nextLine();
+
+            int n = s.length();
+
+            String first = s.substring(0, n / 2);
+
+            String second = s.substring((n + 1) / 2);
+
+            
+            Map<Character, Long> firstFreq = first.chars()
+                    .mapToObj(ch -> (char) ch)
+                    .collect(Collectors.groupingBy(
+                            ch -> ch,
+                            Collectors.counting()
+                    ));
+
+            Map<Character, Long> secondFreq = second.chars()
+                    .mapToObj(ch -> (char) ch)
+                    .collect(Collectors.groupingBy(
+                            ch -> ch,
+                            Collectors.counting()
+                    ));
+
+            System.out.println(firstFreq.equals(secondFreq) ? "YES" : "NO");
+        }
+
+        sc.close();
+    }
+}
+
+
+Input
+
+6
+gaga
+abcde
+rotor
+xyzxy
+abbaab
+ababc
+
+Output
+
+YES
+NO
+YES
+YES
+NO
+NO
