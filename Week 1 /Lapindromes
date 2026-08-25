@@ -40,5 +40,25 @@ public class Main {
 }
 
 
+Input
+
+6
+gaga
+abcde
+rotor
+xyzxy
+abbaab
+ababc
+
+Output
+
+YES
+NO
+YES
+YES
+NO
+NO
+
+
 
 
