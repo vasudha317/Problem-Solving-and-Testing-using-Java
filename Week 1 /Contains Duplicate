@@ -1,1 +1,21 @@
+import java.util.*;
 
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        
+        boolean result = Arrays.stream(nums)
+                .distinct()
+                .count() != nums.length;
+
+        return result;
+    }
+}
+
+
+
+Input
+4
+1 2 3 1
+
+Output
+true
