@@ -77,3 +77,18 @@ May reduce the number of elements	Usually keeps the same number
 m -> m >= 60	m -> m + 5
 
 6. Can it be solved without Stream API?
+
+Yes. We can use a normal for loop to check each mark, add 5 bonus marks, store the results, calculate the sum, and sort the list. Stream API makes the processing shorter, cleaner, and more functional.
+
+Stream Pipeline
+marks
+  ↓
+filter(m >= 60)
+  ↓
+map(m + 5)
+  ↓
+sorted(descending)
+  ↓
+updated marks
+  ↓
+average()
